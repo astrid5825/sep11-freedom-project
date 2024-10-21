@@ -31,6 +31,8 @@ This.name=name;
 ```
 What this does is create a new "person" (class), **(note ig = Impact)**. From this base, you can extend and build onto this. You can make as many as you want. **(Note, "name" is a property of the class, you need to use ``.name=name;`` )**
 
+My next blog will most likely be about adding items/media into the game. I have not been able to edit the actual stage, or add characters. But for now, this is what I have to offer. Youtube has been my number one help, along with the folks on slack giving me guidence on what I may need to do. Big shout out to them :) 
+
 [Next](entry02.md)
 
 [Home](../README.md)
