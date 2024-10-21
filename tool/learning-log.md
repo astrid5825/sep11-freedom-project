@@ -7,7 +7,7 @@
 ---
 
 ### 10/21/2024:
-* I mixed up the blog and learning log, most of my work is [here](entry01.md)
+* I mixed up the blog and learning log, most of my work is [here](blog/entry01.md)
 
 ### X/X/XX:
 * Text
