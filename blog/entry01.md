@@ -3,7 +3,7 @@
 
 # Intro to Impact.Js
 
-Impact.Js is used to mainly make platforming games, however I want to see if I am able to make a game with gameplay mechanics similar to a platformer, but with a slightly different twist. Orignally, a issue I had was getting Impact to run. I wasn't sure what I was even supposed to do. Thanks to Slack and youtube, I now know the basics.
+Impact.Js is used to mainly make platforming games, however I want to see if I am able to make a game with gameplay mechanics similar to a platformer, but with a slightly different twist. Orignally, a issue I had was getting Impact to run. I wasn't sure what I was even supposed to do. Thanks to Slack and youtube, I now how to open it... oof XP.
 
 ## IMPACT
 *Impact actually has it's own way of loading other Javascript sourcefiles into an Object, you'd need something called a "define Block". Shown below:
