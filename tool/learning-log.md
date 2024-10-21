@@ -6,8 +6,8 @@
 
 ---
 
-### X/X/XX:
-* Text
+### 10/21/2024:
+* I mixed up the blog and learning log, most of my work is [here](entry01.md)
 
 ### X/X/XX:
 * Text
