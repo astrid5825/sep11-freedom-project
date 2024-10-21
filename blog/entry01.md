@@ -30,6 +30,7 @@ This.name=name;
 });
 ```
 What this does is create a new "person" (class), **(note ig = Impact)**. From this base, you can extend and build onto this. You can make as many as you want. **(Note, "name" is a property of the class, you need to use ``.name=name;`` )**
+
 [Next](entry02.md)
 
 [Home](../README.md)
