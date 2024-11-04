@@ -4,7 +4,7 @@ by **Astrid**
 ## Context
 I am a student at [HSTAT](https://www.hstat.org/) in the [Software Engineering Program](https://hstatsep.github.io/). The "Freedom Project" for SEP11 is a year-long project all about making something using JavaScript along with a third-party JS tool.
 
-For my project, I chose to independently study **Impact** in order to help me make **A level based game**.
+For my project, I chose to independently study **Kaboom.Js** in order to help me make **A level based game**.
 
 ## Links
 
@@ -19,7 +19,7 @@ For my project, I chose to independently study **Impact** in order to help me ma
 * Fun
 ##### CONS
 * Time consuming
-
+*addicting??
 
 ## Blog
 Below you will find my blog about how I made my project.
