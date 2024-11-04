@@ -2,7 +2,7 @@
 ##### 11/4/2024
 
 ## Context
-I am using ***Kaboom.Js***. And I will be writing about it, even though I am not using impact anymore, I wanted to keep this in. Because it might come in handy for people who are using Impact.
+I am using ***Kaboom.Js***. And I will be writing about it, even though I am not using impact anymore, I wanted to keep the existing stuff I have in. Because it might come in handy for people who are using Impact, always good to help out your classmates.
 
 # Kaboom, what is it?
 
