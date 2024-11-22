@@ -55,6 +55,10 @@ onKeyDown("down", () => {
 
 All of this was found in the playground alone, as well as other code snippids. The next blog entry will be about me putting Kaboom into my IDE, since I did it wrong the first time. As well as sprite making in general.
 
+[(I am also using the tutroials Kaboom offers.)](https://kaboomjs.com/doc/intro)
+
+A lot of this is new, however loading sprites and movement commands can be really helpful, loading sprites/loading images is a given, however movement mechanics help teach me how to format brackets. Since the formatting would be similar to how if/else statements are. Just slightly spread apart. In the future, I could try and use Loops to make certain things like a forever moving npc.
+
 # 10/20/2024, impact notes (this is extra)
 
 ## Impact.Js (from what I understood)
