@@ -10,6 +10,8 @@ I am using ***Kaboom.Js***. And I will be writing about it, even though I am not
 
 the first thing I looked at is **the playground**. The playground really helpful, its like a template for code you might need. Like movement code, or code for sprites. as an example, here is the code needed for movement in Kaboom!
 
+[( this is the playground )](https://kaboomjs.com/play?example=add)
+
 ```
 kaboom()
 
