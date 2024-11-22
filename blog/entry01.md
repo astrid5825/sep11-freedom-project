@@ -59,7 +59,7 @@ All of this was found in the playground alone, as well as other code snippids. T
 
 As of right now, I am still defining what I need, as in what code I need and don't need. My game is not going to be a platformer, so I need to see how my code would have to differ because of this. Most people who've made Kaboom games in the past (i've noticed) have made a platformer, so I wanted to do this challenge and make something new. I've researched, and my brainstorm is that instead of having it be flat, it's going to be top-down. Meaning instead of only going left right and up (jump). I'd let the player move in all directions, with the sacrifice of no jumping (mechanically). This allows the player to explore every level, and find every clue they need to solve the puzzle and win the game.
 
-A lot of this is new, however loading sprites and movement commands can be really helpful, loading sprites/loading images is a given, however movement mechanics help teach me how to format brackets. Since the formatting would be similar to how if/else statements are. Just slightly spread apart. In the future, I could try and use Loops to make certain things like a forever moving npc.
+A lot of this is new, however loading sprites and movement commands can be really helpful, loading sprites/loading images is a given, it's always good to re-fresh your head and remember things like adding pictures to your project. However movement mechanics help teach me how to format brackets. Since the formatting would be similar to how if/else statements are. Just slightly spread apart. In the future, I could try and use Loops to make certain things like a forever moving npc.
 
 # 10/20/2024, impact notes (this is extra)
 
