@@ -28,7 +28,7 @@ onKeyDown("right", () => {
 	player.move(SPEED, 0)
 })
 ```
-This is basically telling Kaboom "Hey! When **x** is pressed, make the sprite on screen move **x** direction!". and just like that, we have our moving sprite!
+This is basically telling Kaboom "Hey! When **x** is pressed, make the sprite on screen move!". and just like that, we have our moving sprite! I've said this in the last entry, but now I can go more in depth, the ``const SPEED`` is what makes the sprite move, you can see in the code, SPEED sometimes has a little negitive sign. Well, this determines direction. That's how Kaboom knows to " Make the sprite on screen move **x** direction!" when a key is pressed.
 
 ## The works in progress
 
