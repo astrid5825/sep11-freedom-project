@@ -30,6 +30,11 @@ onKeyDown("right", () => {
 ```
 Thus is basically telling Kaboom "Hey! When **x** is pressed, make the sprite on screen move **x** direction!". and just like that, we have our moving sprite!
 
+## The works in progress
+
+The goal of this game is to find a friend of Azzy. I tried to code them into the game too,
+![image](https://github.com/user-attachments/assets/310a7db6-6578-4c0d-a74f-36af2ad81453)
+However as of right now they do not show up because I coded them wrong. They need to be recgonized as an item, if I understand correctly. Since running into them would trigger a "You won!" screen.
 
 [Previous](entry01.md) | [Next](entry03.md)
 
