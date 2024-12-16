@@ -15,7 +15,9 @@ const player = add([
    area(),
 ])
 ```
-Above me is the code to add our little Azzy into existence. This just kind of puts her on the map. ``const SPEED`` is what we need to actually get her to move. Once we set a speed, we can then bind movement options to the arrow keys, like so:
+Above me is the code to add our little Azzy into existence. This just kind of puts her on the map. Example,
+![image](https://github.com/user-attachments/assets/5eb0e396-09f4-4415-9e30-ef220429b9b5)
+``const SPEED`` is what we need to actually get her to move. Once we set a speed, we can then bind movement options to the arrow keys, like so:
 
 ```
 onKeyDown("left", () => {
@@ -27,7 +29,7 @@ onKeyDown("right", () => {
 })
 ```
 Thus is basically telling Kaboom "Hey! When **x** is pressed, make the sprite on screen move **x** direction!". and just like that, we have our moving sprite!
-![image](https://github.com/user-attachments/assets/5eb0e396-09f4-4415-9e30-ef220429b9b5)
+
 
 [Previous](entry01.md) | [Next](entry03.md)
 
