@@ -28,14 +28,22 @@ onKeyDown("right", () => {
 	player.move(SPEED, 0)
 })
 ```
-Thus is basically telling Kaboom "Hey! When **x** is pressed, make the sprite on screen move **x** direction!". and just like that, we have our moving sprite!
+This is basically telling Kaboom "Hey! When **x** is pressed, make the sprite on screen move **x** direction!". and just like that, we have our moving sprite!
 
 ## The works in progress
 
 The goal of this game is to find a friend of Azzy. I tried to code them into the game too,
 ![image](https://github.com/user-attachments/assets/310a7db6-6578-4c0d-a74f-36af2ad81453)
 
-However as of right now they do not show up because I coded them wrong. They need to be recgonized as an item, if I understand correctly. Since running into them would trigger a "You won!" screen.
+However as of right now they do not show up because I coded them wrong. They need to be recgonized as an item, if I understand correctly. Since running into them would trigger a "You won!" screen. But, the fact both of them can pop up on the Screen means i've done what I've wanted too.
+
+## The goal for next Blog
+
+By next entry, I want to try and make a level. Not the mechanic where Azzy teleports, but for now just a starting level. I want to add dialouge too. This is to practice making the levels and decorating them, and will help in the long run. [(I found this youtube video I can watch on making Kaboom RPGs, this might help me with my goal!)](https://youtu.be/jcoiEpzD3yc?si=Qwba3LWOlF6S9toI).
+
+## How FP is helping me
+
+A LOT more functions then I expected are required. So when I code this game, I am practicing how to write Functions, and I feel like I am getting better and understanding them as I go on!
 
 [Previous](entry01.md) | [Next](entry03.md)
 
