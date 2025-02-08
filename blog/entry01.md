@@ -10,6 +10,8 @@ I am using ***Kaboom.Js***. And I will be writing about it, even though I am not
 
 the first thing I looked at is **the playground**. The playground really helpful, its like a template for code you might need. Like movement code, or code for sprites. as an example, here is the code needed for movement in Kaboom!
 
+[( this is the playground )](https://kaboomjs.com/play?example=add)
+
 ```
 kaboom()
 
@@ -52,6 +54,12 @@ onKeyDown("down", () => {
 ^^^ ``.onKeyDown()`` tells us what keys would need to be pressed for something to happen, as well as where the sprite would move. While ``player.move()`` tells us how much the sprite would move if that ket was clicked.
 
 All of this was found in the playground alone, as well as other code snippids. The next blog entry will be about me putting Kaboom into my IDE, since I did it wrong the first time. As well as sprite making in general.
+
+[(I am also using the tutroials Kaboom offers.)](https://kaboomjs.com/doc/intro)
+
+As of right now, I am still defining what I need, as in what code I need and don't need. My game is not going to be a platformer, so I need to see how my code would have to differ because of this. Most people who've made Kaboom games in the past (i've noticed) have made a platformer, so I wanted to do this challenge and make something new. I've researched, and my brainstorm is that instead of having it be flat, it's going to be top-down. Meaning instead of only going left right and up (jump). I'd let the player move in all directions, with the sacrifice of no jumping (mechanically). This allows the player to explore every level, and find every clue they need to solve the puzzle and win the game.
+
+A lot of this is new, however loading sprites and movement commands can be really helpful, loading sprites/loading images is a given, it's always good to re-fresh your head and remember things like adding pictures to your project. However movement mechanics help teach me how to format brackets. Since the formatting would be similar to how if/else statements are. Just slightly spread apart. In the future, I could try and use Loops to make certain things like a forever moving npc.
 
 # 10/20/2024, impact notes (this is extra)
 
