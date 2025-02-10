@@ -25,7 +25,9 @@ This is defining what each symbol should look like. You can see that I tried to 
 This was the error I got after this, I tried getting rid of the extra variables (Because thanks to slack, I realized it was defined twice.) But it seemed not enough. So later, I went and tried to rewrite my code right from the [(Playground)](https://kaboomjs.com/play?example=rpg) itself. Using the code it used
 ## Attempt two: With the playgrounds help.
 After the first try, I went back and copied the code they had there. And then I edited it to how I saw fit, Here is what I had after I did everything.
-[alt text](image.png)
+
+![alt text](image.png)
+
 This code didn't work either, but it was due to something I'm not sure how to fix. It claims that "Tile Width" is *not* defined. My first step to try and fix this was try to edit Width/Height. But that didn't do anything. Most videos I watched on Kaboom.js RPG's all had the same way of writing that line as how I wrote it. So I am not 100% sure what went wrong.
 # The Goal for Blog 4
 So, I really need to get the background done. But after I do that, my goal is to make/add dialogue. Like how I wanted to do for my MVP. It's to keep the player from wondering out of bounds, plus I could get whitty with what I could write. It would probably be fun. Another goal (not code related) is to start on actual background sprites. This is more of a MVP but, it's something I need to start doing.
