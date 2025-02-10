@@ -12,11 +12,16 @@ My goal was to try to make the starter room for the player to spawn into (as sai
 # How it went
 ## Attempt one: By Myself
 [(Using the Kaboom Playground as a reference)](https://kaboomjs.com/play?example=rpg), I tried to write the code myself without copy and pasting anything. To get a feel for how it works. I got this:
-[alt text](screenshot_2025-02-05_2.55.42_pm.png)
+
+![alt text](screenshot_2025-02-05_2.55.42_pm.png)
+
 In Kaboom, this is how the program builds its levels in a way. In this case, you use ``-`` to tell the code that "Hey! Something should be here!".
 ![alt text](screenshot_2025-02-05_2.55.48_pm.png)
+
 This is defining what each symbol should look like. You can see that I tried to tell the code that ``-`` should be a block, so in theroy, it should've come up with [this image](treehousewallsPlaceholder.png) acting as "walls". However, this just broke my code.
-[alt text](image_480.png)
+
+![alt text](image_480.png)
+
 This was the error I got after this, I tried getting rid of the extra variables (Because thanks to slack, I realized it was defined twice.) But it seemed not enough. So later, I went and tried to rewrite my code right from the [(Playground)](https://kaboomjs.com/play?example=rpg) itself. Using the code it used
 ## Attempt two: With the playgrounds help.
 After the first try, I went back and copied the code they had there. And then I edited it to how I saw fit, Here is what I had after I did everything.
