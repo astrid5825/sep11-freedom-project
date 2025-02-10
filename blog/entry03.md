@@ -18,7 +18,7 @@ My goal was to try to make the starter room for the player to spawn into (as sai
 In Kaboom, this is how the program builds its levels in a way. In this case, you use ``-`` to tell the code that "Hey! Something should be here!".
 ![alt text](screenshot_2025-02-05_2.55.48_pm.png)
 
-This is defining what each symbol should look like. You can see that I tried to tell the code that ``-`` should be a block, so in theroy, it should've come up with [this image](treehousewallsPlaceholder.png) acting as "walls". However, this just broke my code.
+This is defining what each symbol should look like. You can see that I tried to tell the code that ``-`` should be a block, so in theroy, it should've come up with [this image](image-1.png) acting as "walls". However, this just broke my code.
 
 ![alt text](image_480.png)
 
