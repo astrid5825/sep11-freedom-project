@@ -1,7 +1,7 @@
 # Plan
 
-## Tool: 
-## Product: 
+## Tool: Kaboom.JS
+## Product: Void Jumpers (Kaboom top-down RPG)
 
 ---
 
@@ -9,14 +9,20 @@
 
 #### MVP
 
-- [ ] Task (deadline: X)
-  - [ ] Subtask (deadline: X)
-
+- [ ] Make the basic mechanics (deadline: 4/7)
+ - [x] Make sprite move around
+ - [ ] Make the different levels (get done before the second monday in march please.)
+ - [ ] Add Pinkie (The goal of the game) so you can win
+- [ ] Extra flare (deadline: 5/19 )
+  - [ ] add randomizer (levels)
+  - [ ] Animate sprites
 #### Beyond MVP
 
-- [ ] Task
-  - [ ] Subtask
-
+- [ ] Details (no deadline, these things don't make or break the game)
+  - [ ] Loading screen
+  - [ ] Background NPCs
+  - [ ] in-between animations (teleporting)
+  - [ ] in-between animations (finding pinkie)
 
 <!-- EXAMPLE
 
