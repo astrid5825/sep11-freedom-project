@@ -10,9 +10,9 @@
 #### MVP
 
 - [ ] Make the basic mechanics (deadline: 4/7)
- - [x] Make sprite move around
- - [ ] Make the different levels (get done before the second monday in march please.)
- - [ ] Add Pinkie (The goal of the game) so you can win
+  - [x] Make sprite move around
+  - [ ] Make the different levels (get done before the second monday in march please.)
+  - [ ] Add Pinkie (The goal of the game) so you can win
 - [ ] Extra flare (deadline: 5/19 )
   - [ ] add randomizer (levels)
   - [ ] Animate sprites
