@@ -1,7 +1,7 @@
 # Entry 4
-##### X/X/XX
+##### 3/16/2025
 
-Text
+Nothing happened, unable to work on FP.
 
 [Previous](entry03.md) | [Next](entry05.md)
 

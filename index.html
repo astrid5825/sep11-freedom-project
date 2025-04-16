@@ -18,65 +18,153 @@
         <!-- HTML -->
         <script type="module">
     import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
-    kaboom({
-        background: [255, 36, 72,],
-    })
-    const SPEED = 220
-    loadSprite ("azHolder", "azzyPlaceholder.png")
-    loadSprite ("piHolder","pinkiePlaceholder.png")
-    loadSprite ("woHolder", "treehousewallsPlaceholder.png")
 
-    add([
-		sprite("piHolder"),
-		pos(636,height()- 295),
-        scale(.3)
-	])
-
-const player = add([
-   sprite("azHolder"),
-   pos(636,height()- 295),
-   scale(.1),
-   area(),
-])
-
-
-onKeyDown("left", () => {
-	player.move(-SPEED, 0)
+kaboom({
+    background: [10, 100, 200],
+    fullscreen: true,
 })
+loadSprite ("azHolder", "azzyPlaceholder.png")
+loadSprite ("piHolder","pinkiePlaceholder.png")
+loadSprite ("woHolder", "treehousewallsPlaceholder.png")
+loadSprite ("doHolder", "door.jpg")
+loadSprite("outsideHolder", "kaboomjs.png")
 
-onKeyDown("right", () => {
-	player.move(SPEED, 0)
-})
+var levelIDX = 1
+scene("main", (levelIDX) => {
 
-onKeyDown("up", () => {
-	player.move(0, -SPEED)
-})
+const SPEED = 200
 
-onKeyDown("down", () => {
-	player.move(0, SPEED)
-})
-
-scene("main", (levelIdx)); {
-	const levelIdx = [
-		"===|====",
-		"=      =",
-		"=      =",
-		"=      =",
-		"=      =",
-		"=   @  =",
-		"========",
+//const characters ={ (work on this when you can)
+//}
+const levels = [
+		[
+			"===|====",
+			"=      =",
+			"=      =",
+			"=      =",
+			"=      =",
+			"=   @  =",
+			"========",
+		],
+		[
+			"--------",
+			"-      -",
+			"-      -",
+			"^      -",
+			"-      -",
+			"-  @   -",
+			"--------",
+		],
 	]
-addlevel(levelIdx), {
-	width: 64,
-	height: 64,
-	pos: vec2(64,64),
-"=": () => [
-	sprite("woHolder"),
-	area(),
-	solid(),
-]
-}
-}
+const level = addLevel(levels[levelIdx],
+    tileWidth, 64,
+    tileHeight, 64,
+    pos, vec2(64, 64),
+    tiles, {
+        "=": () => [
+				sprite("woHolder"),
+				area(),
+				body({ isStatic: true }),
+				anchor("center"),
+            ],
+            "-": () => [
+				sprite("outsideHolder"),
+				area(),
+				body({ isStatic: true }),
+				anchor("center"),
+    ],
+           "@": () => [
+            sprite("azHolder"),
+            area(),
+            body({isStatic: true}),
+            anchor("center"),
+            "Azzy"
+           ],
+           "|": () => [
+            sprite("doHolder"),
+            area(),
+            body({isStatic: true}),
+            anchor ("center"),
+            "door"
+           ],
+           "^": () => [
+            sprite("piHolder"),
+            area(),
+            body({isStatic: true}),
+            anchor("center"),
+            "Pinky"
+           ],
+    },
+           function addDialog() {
+
+            //doesn't work
+    //         player.onCollide("door", () => {
+	// 	if (player.on) {
+	// 		if (levelIdx + 1 < levels.length) {
+	// 			go("main", levelIdx + 1)
+	// 		} else {
+	// 			go("win")
+	// 		}
+	// 	} else {
+	// 		dialog.say("you got no key!")
+	// 	}
+	// })
+
+
+
+           //pinky himself
+//            let Pinky = false,
+//  player.onCollide("piHolder", (Pinky) => {
+// 		destroy(Pinky)
+// 		Pinky = true
+// 	})
+
+    }
+)
+
+
+ }
+)
+go("main", 0)
+//     kaboom({
+//     fullscreen: true,
+//     canvas: document.getElementById("game"),
+//     background: [10, 100, 200], // RGB values for black background
+// });
+//     loadSprite ("azHolder", "azzyPlaceholder.png")
+//     loadSprite ("piHolder","pinkiePlaceholder.png")
+//     loadSprite ("woHolder", "treehousewallsPlaceholder.png")
+//     loadSprite ("doHolder", "door.jpg")
+
+
+// scene("main", (levelIdx) => {
+// const SPEED = 200
+
+// //
+// const player = add([
+//    sprite("azHolder"),
+//    pos(636,height()- 295),
+//    scale(.1),
+//    area(),
+// ])
+
+
+// onKeyDown("left", () => {
+// 	player.move(-SPEED, 0)
+// })
+
+// onKeyDown("right", () => {
+// 	player.move(SPEED, 0)
+// })
+
+// onKeyDown("up", () => {
+// 	player.move(0, -SPEED)
+// })
+
+// onKeyDown("down", () => {
+// 	player.move(0, SPEED)
+// })
+
 
 // const levels = [
 // 		[
@@ -103,33 +191,22 @@ addlevel(levelIdx), {
 // 			],
 // 		}
 // 	}
-// 			"-": () => [
-// 				sprite("steel"),
-// 				area(),
-// 				body({ isStatic: true }),
-// 				anchor("center"),
-// 			],
-// 			"$": () => [
-// 				sprite("key"),
-// 				area(),
-// 				anchor("center"),
-// 				"key",
-// 			],
-// 			"@": () => [
+
+// 			"@"; () => [
 // 				sprite("azzHolder"),
 // 				anchor("center"),
 // 				"player",
 //         ]
 // 			,
-// 			"|": () => [
-// 				sprite("door"),
+// 			"|"; () => [
+// 				sprite("doHolder"),
 // 				area(),
 // 				body({ isStatic: true }),
 // 				anchor("center"),
 // 				"door",
 // 			],
-// 		},
-//     }
+//       },
+
 
 </script>
 
@@ -145,5 +222,4 @@ addlevel(levelIdx), {
     </body>
 </html>
 </script>
-
 
