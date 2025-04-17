@@ -29,73 +29,165 @@ loadSprite ("woHolder", "treehousewallsPlaceholder.png")
 loadSprite ("doHolder", "door.jpg")
 loadSprite("outsideHolder", "kaboomjs.png")
 
-var levelIDX = 1
-scene("main", (levelIDX) => {
-
+//scene("game", ({ levelIdx, score }) => {
 const SPEED = 200
+ const player = add([
+    sprite("azHolder"),
+    pos(636,height()- 295),
+    scale(.1),
+   area(),
+])
+    const x = rand(0, width())
+	const y = rand(0, height())
+
+add ([
+    sprite("piHolder"),
+    pos(x, y),
+    area(),
+    scale(.3),
+    "pinky"
+])
+
+ onKeyDown("left", () => {
+ 	player.move(-SPEED, 0)
+ })
+
+ onKeyDown("right", () => {
+ 	player.move(SPEED, 0)
+ })
+
+ onKeyDown("up", () => {
+ 	player.move(0, -SPEED)
+ })
+
+ onKeyDown("down", () => {
+ 	player.move(0, SPEED)
+ })
+
+ player.onCollide("pinky", () => {
+		destory(pinky)
+    //player.pos = level.tile2Pos(0, 0)
+		go("win")
+//         add([
+//  ])
+	})
+
+    let curFont = 0
+let curSize = 48
+const pad = 24
+
+const builtinFonts = [
+	"monospace",
+]
+
+const fonts = [
+	...builtinFonts,
+	"4x4",
+	"unscii",
+	"FlowerSketches",
+	"apl386",
+	"Sans-Serif",
+]
+
+
+    const input = add([
+	pos(pad),
+	// Render text with the text() component
+	text("where is your buddy?!", {
+		font: fonts[curFont],
+		width: width() - pad * 2,
+		size: curSize,
+		align: "center",
+		lineSpacing: 8,
+		letterSpacing: 4,
+		transform: (idx, ch) => ({
+			color: hsl2rgb((time() * 0.2 + idx * 0.1) % 1, 0.7, 0.8),
+			pos: vec2(0, wave(-4, 4, time() * 4 + idx * 0.5)),
+			scale: wave(1, 1.2, time() * 3 + idx),
+			angle: wave(-9, 9, time() * 3 + idx),
+		}),
+	}),
+])
+
+
+ scene("win", () => {
+add([
+		text("You found them!"),
+		pos(12),
+	])
+    // text("You found your friend!"),
+    // // pos(12),
+ })
+
+//level stuff, not MVP
+//var levelIdx = 1
+
+//scene("main", (levelIdx) => {
+
+//const SPEED = 200
 
 //const characters ={ (work on this when you can)
 //}
-const levels = [
-		[
-			"===|====",
-			"=      =",
-			"=      =",
-			"=      =",
-			"=      =",
-			"=   @  =",
-			"========",
-		],
-		[
-			"--------",
-			"-      -",
-			"-      -",
-			"^      -",
-			"-      -",
-			"-  @   -",
-			"--------",
-		],
-	]
-const level = addLevel(levels[levelIdx],
-    tileWidth, 64,
-    tileHeight, 64,
-    pos, vec2(64, 64),
-    tiles, {
-        "=": () => [
-				sprite("woHolder"),
-				area(),
-				body({ isStatic: true }),
-				anchor("center"),
-            ],
-            "-": () => [
-				sprite("outsideHolder"),
-				area(),
-				body({ isStatic: true }),
-				anchor("center"),
-    ],
-           "@": () => [
-            sprite("azHolder"),
-            area(),
-            body({isStatic: true}),
-            anchor("center"),
-            "Azzy"
-           ],
-           "|": () => [
-            sprite("doHolder"),
-            area(),
-            body({isStatic: true}),
-            anchor ("center"),
-            "door"
-           ],
-           "^": () => [
-            sprite("piHolder"),
-            area(),
-            body({isStatic: true}),
-            anchor("center"),
-            "Pinky"
-           ],
-    },
-           function addDialog() {
+//const levels = [
+//		[
+//			"===|====",
+//			"=      =",
+//			"=      =",
+//			"=      =",
+//			"=      =",
+//			"=   @  =",
+//			"========",
+//		],
+//		[
+//			"--------",
+//			"-      -",
+//			"-      -",
+//			"^      -",
+//			"-      -",
+//			"-  @   -",
+//			"--------",
+//		],
+//	]
+//const level = addLevel(levels[levelIdx],
+  //  tileWidth, 64,
+//    tileHeight, 64,
+  //  pos, vec2(64, 64),
+//    tiles, {
+//        "=": () => [
+//				sprite("woHolder"),
+//				area(),
+//				body({ isStatic: true }),
+//				anchor("center"),
+  //          ],
+//            "-": () => [
+//				sprite("outsideHolder"),
+//				area(),
+//				body({ isStatic: true }),
+//				anchor("center"),
+//    ],
+  //         "@": () => [
+//            sprite("azHolder"),
+  //          area(),
+//            body({isStatic: true}),
+  //          anchor("center"),
+//            "Azzy"
+  //         ],
+    //       "|": () => [
+//            sprite("doHolder"),
+  //          area(),
+    //        body({isStatic: true}),
+//            anchor ("center"),
+  //          "door"
+    //       ],
+      //     "^": () => [
+//            sprite("piHolder"),
+  //          area(),
+    //        body({isStatic: true}),
+//            anchor("center"),
+  //          "Pinky"
+//           ],
+  //  },
+    //       function addDialog() {
 
             //doesn't work
     //         player.onCollide("door", () => {
@@ -119,13 +211,13 @@ const level = addLevel(levels[levelIdx],
 // 		Pinky = true
 // 	})
 
-    }
-)
+//    }
+//)
 
 
- }
-)
-go("main", 0)
+ //}
+//)
+//go("main", 0)
 //     kaboom({
 //     fullscreen: true,
 //     canvas: document.getElementById("game"),
