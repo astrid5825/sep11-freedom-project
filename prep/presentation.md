@@ -1,16 +1,16 @@
 # Presentation Plan
 
 ## Hook
-* 
+* My hook will be showing off my inspo, as in the games I was inspired by.
 
 ## Product
-* 
+* show of game - do a casual demo of my game
 
 ## Process
-* 
-
+*  explain the process and the challenges I faced to make my MVP.
+  
 ## Conclusion
-* 
+* Give myself glows and grows for if I wanted to make anything like this in the future, maybe showing off some scrapped content as well
 
 <!-- EXAMPLE
 
