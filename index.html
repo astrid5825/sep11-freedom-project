@@ -20,202 +20,23 @@
     import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
 
 kaboom({
-    background: [227, 39, 86],
+    background: [74, 48, 82],
     fullscreen: true,
 })
 loadSprite ("azHolder", "azzyPlaceholder.png")
 loadSprite ("piHolder","pinkiePlaceholder.png")
-loadSprite ("woHolder", "purplesteel.png")
-loadSprite ("doHolder", "door.png")
-loadSprite ("lockedDoor", "doorPlaceholder.png")
+// loadSprite ("woHolder", "purplesteel.png")
+// loadSprite ("doHolder", "door.png")
+// loadSprite ("lockedDoor", "doorPlaceholder.png")
 //loadSprite("outsideHolder", "kaboomjs.png")
 loadSprite("mystic", "mysticflour.png")
 loadSprite("daria", "DariaMorgendorffer.png")
 loadSprite("madoka", "Madoka.png")
-loadSprite("key", "key.png")
-loadSprite("Fake1", "fakekey1.png")
-loadSprite("Fake2", "fakekey2.png")
-
-scene("main", (levelIdx) => {
-	const levels = [
-		[
-		"_________",
-	  "_       _",
-		"_ M     _",
-		"_       |",
-		"_       _",
-		"_   A   _",
-		"_________",
-	],
-	[
-		"______L___",
-		"_ A      _",
-		"_        _",
-		"_    R   _",
-		"_ 1      _",
-		"_     2  _",
-		"_        _",
-		"_      @ _",
-		"__________",
-	],
-	[
-		"_________",
-		"_     P _",
-		"_       _",
-		"_   F   _",
-		"_       _",
-		"_   A   _",
-		"_________",
-	],
-]
-
-addLevel(levels[levelIdx],{
-	tileWidth: 64,
-	tileHeight: 64,
-	pos: vec2(64,64),
-   tiles: {
-  "_": () => [
-    sprite("woHolder"),
-    area(),
-   body({ isStatic: true }),
-   anchor("center"),
-  ],
-  "|": () => [
-    sprite("doHolder"),
-    area(),
-    scale(1),
-    anchor("center"),
-    "unlocked"
-  ],
-  "L": () =>[
-    sprite("lockedDoor"),
-    area(),
-    "locked"
-  ],
-  "@": () => [
-    sprite("key"),
-    area(),
-    "key",
-  ],
-"1": () => [
-  sprite("Fake1"),
-  area(),
-  "fake1",
-],
-"2": () => [
-  sprite("Fake2"),
-  area(),
-  "fake2"
-],
- "A": () => [
-    sprite("azHolder"),
-    area(),
-    scale(.1),
-    anchor("center"),
-    "player"
-  ],
-  "P": () => [
-    sprite("piHolder"),
-    area(),
-     scale(.1),
-    "Proto",
-  ],
-  "M": () => [
-    sprite("madoka"),
-    area(),
-     scale(.20),
-     anchor("center"),
-    "character",
-    {msg: "Madotsuki? It's you! Prototype is ahead, Good luck! :)"},
-  ],
-  "R": () => [
-    sprite("daria"),
-    area(),
-     scale(.1),
-    "character",
-    {msg: "oh, hello stranger. This door needs a key, but this game needed a challenge and the creator wanted to be cliche. Find the right key to go through."},
-  ],
-  "F": () => [
-   sprite("mystic"),
-   area(),
-    scale(.3),
-  "character",
-  {msg:"I fear I am not the one you were looking for."}
-  ],
-  }
-})
-const player = get("player")[0]
-
-const dialog = add([
-  text("")
-])
-
-let hasKey = false
-
-//player.onCollide("key",(key) => {
- // destory(key)
- // hasKey = true
-//})
-
-//player.onCollide("locked", () => {
-//  if (hasKey){
- //   if(levelIdx + 1 < levels.length){
-//      go("main", levelIdx + 1)
- //   } else{
-  //    go("main", levelIdx + 2)
- //   }
-//  } else{
- //   dialog.text = "Talk to Daria"
- // }
-//})
-
-//player.onCollide("character", (ch) => {
- // dialog.text = ch.msg
-//})
-
-const SPEED = 200
+// loadSprite("key", "key.png")
+// loadSprite("Fake1", "fakekey1.png")
+// loadSprite("Fake2", "fakekey2.png")
 
 
-player.onCollide("character", (ch) => {
-		dialog.say(ch.msg)
-	})
-
-	const dirs = {
-		"left": LEFT,
-		"right": RIGHT,
-		"up": UP,
-		"down": DOWN,
-	}
-
-	for (const dir in dirs) {
-		onKeyPress(dir, () => {
-			dialog.dismiss()
-		})
-		onKeyDown(dir, () => {
-			player.move(dirs[dir].scale(SPEED))
-		})
-	}
-
-})
-
-
-//const dirs = {
- // "left": LEFT,
-//  "right": RIGHT,
- // "up": UP,
- // "down": DOWN,
-//}
-
-//for (const dir in dirs){
-//  onKeyDown(dir, () => {
-//    dialog.text = ""
-//    player.move(dirs[dir].scale(320))
-//  })
-//}
-
-
-
-go("main",0)
 
 //mvp - backup code js in case
 // loadSprite ("azHolder", "azzyPlaceholder.png")
@@ -224,192 +45,149 @@ go("main",0)
 // loadSprite ("doHolder", "door.jpg")
 // loadSprite("outsideHolder", "kaboomjs.png")
 
-// //scene("game", ({ levelIdx, score }) => {
-// const SPEED = 200
-//  const player = add([
-//     sprite("azHolder"),
-//     pos(636,height()- 295),
-//     scale(.1),
-//    area(),
-// ])
-//     const x = rand(0, width())
-// 	const y = rand(0, height())
+const SPEED = 200
+const ASPEED = 200
+const PSPEED = 400
+const FSPEED = 40
+const MSPEED = 300
+const DSPEED = 60
+ const player = add([
+    sprite("azHolder"),
+    pos(636,height()- 295),
+    scale(.1),
+   area(),
+])
+    const x = rand(0, width())
+	const y = rand(0, height())
 
-// add ([
-//     sprite("piHolder"),
-//     pos(x, y),
-//     area(),
-//     scale(.3),
-//     "pinky"
-// ])
+add ([
+    sprite("piHolder"),
+    pos(x, y),
+    area(),
+    scale(.3),
+     move(x,FSPEED),
+      offscreen({ destroy: true }),
+    "pinky"
+])
 
-//  onKeyDown("left", () => {
-//  	player.move(-SPEED, 0)
-//  })
+if(offscreen({destroy:true})){
+    add([
+        text("he ran away, you need to restart."),
+        anchor(center()),
+    ])
+}
 
-//  onKeyDown("right", () => {
-//  	player.move(SPEED, 0)
-//  })
+player.onCollide("pinky", () => {
+		destory(pinky)
+    //player.pos = level.tile2Pos(0, 0)
+		go("win")
+//         add([
+//  ])
+	})
 
-//  onKeyDown("up", () => {
-//  	player.move(0, -SPEED)
-//  })
+scene("win", () => {
+	add([
+		text("You Win!"),
+		//pos(width() / 2, height() / 2),
+		anchor(center()),
+	])
+})
 
-//  onKeyDown("down", () => {
-//  	player.move(0, SPEED)
-//  })
-
-//  player.onCollide("pinky", () => {
-// 		destory(pinky)
-//     //player.pos = level.tile2Pos(0, 0)
-// 		go("win")
-// //         add([
-// //  ])
-// 	})
-
-//     let curFont = 0
-// let curSize = 48
-// const pad = 24
-
-// const builtinFonts = [
-// 	"monospace",
-// ]
-
-// const fonts = [
-// 	...builtinFonts,
-// 	"4x4",
-// 	"unscii",
-// 	"FlowerSketches",
-// 	"apl386",
-// 	"Sans-Serif",
-// ]
-
-
-//     const input = add([
-// 	pos(pad),
-// 	// Render text with the text() component
-// 	text("where is your buddy?!", {
-// 		font: fonts[curFont],
-// 		width: width() - pad * 2,
-// 		size: curSize,
-// 		align: "center",
-// 		lineSpacing: 8,
-// 		letterSpacing: 4,
-// 		transform: (idx, ch) => ({
-// 			color: hsl2rgb((time() * 0.2 + idx * 0.1) % 1, 0.7, 0.8),
-// 			pos: vec2(0, wave(-4, 4, time() * 4 + idx * 0.5)),
-// 			scale: wave(1, 1.2, time() * 3 + idx),
-// 			angle: wave(-9, 9, time() * 3 + idx),
-// 		}),
-// 	}),
-// ])
-
-
-// scene("win", () => {
+// scene("lose", () => {
 // 	add([
-// 		text("You Win!"),
-// 		pos(width() / 2, height() / 2),
-// 		anchor("center"),
+// 		text("he got away :( )"),
+// 		//pos(width() / 2, height() / 2),
+// 		anchor(center()),
 // 	])
 // })
-    // text("You found your friend!"),
-    // // pos(12),
+
+ onKeyDown("left", () => {
+ 	player.move(-PSPEED, 0)
+ })
+
+ onKeyDown("right", () => {
+ 	player.move(PSPEED, 0)
+ })
+
+ onKeyDown("up", () => {
+ 	player.move(0, -PSPEED)
+ })
+
+ onKeyDown("down", () => {
+ 	player.move(0, PSPEED)
+ })
 
 
-//level stuff, not MVP
-//var levelIdx = 1
+    let curFont = 0
+let curSize = 48
+const pad = 24
 
-//scene("main", (levelIdx) => {
+const builtinFonts = [
+	"monospace",
+]
 
-//const SPEED = 200
-
-//const characters ={ (work on this when you can)
-//}
-//const levels = [
-//		[
-//			"===|====",
-//			"=      =",
-//			"=      =",
-//			"=      =",
-//			"=      =",
-//			"=   @  =",
-//			"========",
-//		],
-//		[
-//			"--------",
-//			"-      -",
-//			"-      -",
-//			"^      -",
-//			"-      -",
-//			"-  @   -",
-//			"--------",
-//		],
-//	]
-//const level = addLevel(levels[levelIdx],
-  //  tileWidth, 64,
-//    tileHeight, 64,
-  //  pos, vec2(64, 64),
-//    tiles, {
-//        "=": () => [
-//				sprite("woHolder"),
-//				area(),
-//				body({ isStatic: true }),
-//				anchor("center"),
-  //          ],
-//            "-": () => [
-//				sprite("outsideHolder"),
-//				area(),
-//				body({ isStatic: true }),
-//				anchor("center"),
-//    ],
-  //         "@": () => [
-//            sprite("azHolder"),
-  //          area(),
-//            body({isStatic: true}),
-  //          anchor("center"),
-//            "Azzy"
-  //         ],
-    //       "|": () => [
-//            sprite("doHolder"),
-  //          area(),
-    //        body({isStatic: true}),
-//            anchor ("center"),
-  //          "door"
-    //       ],
-      //     "^": () => [
-//            sprite("piHolder"),
-  //          area(),
-    //        body({isStatic: true}),
-//            anchor("center"),
-  //          "Pinky"
-//           ],
-  //  },
-    //       function addDialog() {
-
-            //doesn't work
-    //         player.onCollide("door", () => {
-	// 	if (player.on) {
-	// 		if (levelIdx + 1 < levels.length) {
-	// 			go("main", levelIdx + 1)
-	// 		} else {
-	// 			go("win")
-	// 		}
-	// 	} else {
-	// 		dialog.say("you got no key!")
-	// 	}
-	// })
+const fonts = [
+	...builtinFonts,
+	"4x4",
+	"unscii",
+	"FlowerSketches",
+	"apl386",
+	"Sans-Serif",
+]
 
 
+ const mx = rand(0, width())
+const my = rand(0, height())
+add ([
+    sprite("mystic"),
+    pos(mx, my),
+    area(),
+    scale(.3),
+     move(mx,MSPEED),
+    "mystic"
+])
+const dx = rand(0, width())
+const dy = rand(0, height())
+add ([
+    sprite("daria"),
+    pos(dx, dy),
+    area(),
+    scale(.4),
+     move(dx,DSPEED),
+    "daria"
+])
+const ax = rand(0, width())
+const ay = rand(0, height())
+add ([
+    sprite("madoka"),
+    pos(ax, ASPEED),
+    area(),
+    scale(.2),
+     move(ax, SPEED),
+    "madoka"
+])
 
-           //pinky himself
-//            let Pinky = false,
-//  player.onCollide("piHolder", (Pinky) => {
-// 		destroy(Pinky)
-// 		Pinky = true
-// 	})
 
-//    }
-//)
+   // text("You found your friend!")
+    // pos(12),
+ const input = add([
+	pos(pad),
+	// Render text with the text() component
+	text("where is your buddy?!", {
+		font: fonts[curFont],
+		width: width() - pad * 2,
+		size: curSize,
+		align: "center",
+		lineSpacing: 8,
+		letterSpacing: 4,
+		transform: (idx, ch) => ({
+			color: hsl2rgb((time() * 0.2 + idx * 0.1) % 1, 0.7, 0.8),
+			pos: vec2(0, wave(-4, 4, time() * 4 + idx * 0.5)),
+			scale: wave(1, 1.2, time() * 3 + idx),
+			angle: wave(-9, 9, time() * 3 + idx),
+		}),
+	}),
+])
 
 
  //}
